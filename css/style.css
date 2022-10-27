@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* 
+
+font-family: 'Kumbh Sans', sans-serif;
+*/
+
+/* 
+#### Text
+
+- Very dark desaturated blue: hsl(238, 29%, 16%)
+- Soft red: hsl(14, 88%, 65%)
+
+#### Gradient
+
+Background gradient:
+
+- Soft violet: hsl(273, 75%, 66%)
+- Soft blue: hsl(240, 73%, 65%)
+
+
+#### Text
+
+- Very dark grayish blue: hsl(237, 12%, 33%)
+- Dark grayish blue: hsl(240, 6%, 50%)
+
+#### Dividers
+
+- Light grayish blue: hsl(240, 5%, 91%)
+
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    to bottom,
+    hsl(273, 75%, 66%),
+    hsl(240, 73%, 65%)
+  );
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.images {
+  position: absolute;
+  top: -90px;
+  left: 60px;
+  z-index: 1;
+}
+
+.mobile {
+  width: 200px;
+  z-index: 1;
+  filter: drop-shadow(-3px 24px 0px #9999992a);
+}
+
+.desktop,
+.box {
+  display: none;
+}
+
+.arrow {
+  width: 10px;
+  height: 7px;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.details {
+  /* display: none; */
+  height: 0px;
+  opacity: 0;
+  transition: all 0.4s linear;
+  font-size: 12px;
+  padding: 0 25px 0 0;
+}
+
+.active {
+  height: 50px;
+  opacity: 1;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 22px;
+  position: relative;
+  width: 330px;
+  /* delete here */
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  padding: 100px 0 0 0;
+}
+
+.paragraphs-section {
+  align-self: flex-start;
+  padding-left: 25px;
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 25px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: hsl(240, 5%, 91%);
+}
+
+.accordion {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.accordion:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+@media (min-width: 1024px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop,
+  .box {
+    position: absolute;
+    display: block;
+  }
+
+  .images {
+    top: 53px;
+    left: -55px;
+    z-index: 1;
+  }
+
+  .box {
+    top: 139px;
+    left: -50px;
+    z-index: 2;
+  }
+
+  .card {
+    width: 850px;
+  }
+
+  h1,
+  .paragraphs-section {
+    width: 48%;
+    align-self: flex-end;
+    padding-right: 100px;
+  }
+
+  h1 {
+    padding: 45px 0 0 0;
+    margin-bottom: -30px;
+  }
+
+  .paragraphs-section {
+    padding-left: 0;
+    height: 60%;
+  }
+}
